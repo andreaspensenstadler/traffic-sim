@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b15u6i7q1bot3"]
+
+[ext_resource type="Script" uid="uid://dmbewf6a05sjg" path="res://scripts/traffic_light.gd" id="1_uttgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh74b"]
+size = Vector2(40, 100)
+
+[node name="TrafficLight" type="Node2D" unique_id=830055584]
+script = ExtResource("1_uttgq")
+
+[node name="Marking" type="ColorRect" parent="." unique_id=1369636802]
+offset_left = -5.0
+offset_top = -60.0
+offset_right = 5.0
+offset_bottom = -20.0
+
+[node name="Light" type="ColorRect" parent="." unique_id=1003306399]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(1, 0, 0, 1)
+
+[node name="LightInfluenceArea" type="Area2D" parent="." unique_id=1066082409]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightInfluenceArea" unique_id=1042198101]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_vh74b")
