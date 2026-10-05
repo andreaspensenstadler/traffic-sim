@@ -21,11 +21,15 @@ offset_transform_position = Vector2(-20, -10)
 color = Color(0, 0, 1, 1)
 
 [node name="ViewArea" type="Area2D" parent="." unique_id=1788069123]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea" unique_id=601947754]
 shape = SubResource("RectangleShape2D_vh74b")
 
 [node name="StopArea" type="Area2D" parent="." unique_id=1281797406]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StopArea" unique_id=1937116109]
 position = Vector2(10, 0)

@@ -41,19 +41,17 @@ func _act(delta: float) -> void:
 		position.x += SPEED * delta
 
 func _on_view_area_entered(area: Area2D) -> void:
-	if area.get_parent().is_in_group("traffic_lights"):
-		blocking_light = area.get_parent()
+	blocking_light = area.get_parent()
 
-func _on_stop_area_entered(area: Area2D) -> void:
-	if area.get_parent().is_in_group("traffic_lights"):
-		stopping = true
+func _on_stop_area_entered(_area: Area2D) -> void:
+	stopping = true
 
 func _react(callable: Callable) -> void:
 	await get_tree().create_timer(randf_range(REACTION_MIN, REACTION_MAX)).timeout
 	callable.call()
 	reaction_pending = false
 
-func _on_view_area_exited(area: Area2D) -> void:
+func _on_view_area_exited(_area: Area2D) -> void:
 	pass
 
 func _on_stop_area_exited(area: Area2D) -> void:

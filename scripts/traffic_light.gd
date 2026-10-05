@@ -14,7 +14,7 @@ func _ready() -> void:
 func _cycle() -> void:
 	while true:
 		#await get_tree().create_timer(3.0).timeout
-		await get_tree().create_timer(randf_range(0.5, 1.2)).timeout
+		await get_tree().create_timer(randf_range(0.3, 0.6)).timeout
 		
 		is_green = not is_green
 		light.color = Color.GREEN if is_green else Color.RED

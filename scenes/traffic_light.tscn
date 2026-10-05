@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vh74b"]
 size = Vector2(40, 100)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_marking"]
+size = Vector2(10, 40)
+
 [node name="TrafficLight" type="Node2D" unique_id=830055584]
 script = ExtResource("1_uttgq")
 
@@ -24,7 +27,17 @@ offset_bottom = 10.0
 color = Color(1, 0, 0, 1)
 
 [node name="LightInfluenceArea" type="Area2D" parent="." unique_id=1066082409]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightInfluenceArea" unique_id=1042198101]
 position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_vh74b")
+
+[node name="MarkingStoppingArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarkingStoppingArea"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_marking")
