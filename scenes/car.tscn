@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://xyk7wl2sth47"]
 
+[ext_resource type="Script" uid="uid://dxjm5n34p4xwg" path="res://scenes/car.gd" id="1_c35m8"]
+
 [node name="Car" type="Node2D" unique_id=1714348647]
+script = ExtResource("1_c35m8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1675039614]
 custom_minimum_size = Vector2(40, 20)
