@@ -8,6 +8,7 @@ Workflow-Regeln für die Zusammenarbeit in diesem Repo.
 
 ## Workflow
 
+- **Didaktik-Regel**: Spielentwicklungs-Schritte nicht selbst umsetzen, sondern dem Nutzer erklären – er setzt sie selbst um. Der Agent übernimmt nur Repo-/Projektverwaltung (Commits, Issues, Milestones).
 - Nach **jedem abgeschlossenen Schritt**: committen und pushen (`main`).
 - Commit-Messages: kurz, imperativ, deutsch oder englisch konsistent mit bisherigen Commits.
 - **Issues und Milestones auf GitHub pflegen**: neue Aufgaben als Issue anlegen, erledigte Issues schließen (gerne mit Verweis im Commit, z. B. `Fixes #3`).

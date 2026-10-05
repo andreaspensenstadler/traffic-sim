@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1trafficsim"]
+[gd_scene format=3 uid="uid://b1trafficsim"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://jww1lhcmm6mp" path="res://scripts/main.gd" id="1"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=213652179]
 script = ExtResource("1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1485023130]
